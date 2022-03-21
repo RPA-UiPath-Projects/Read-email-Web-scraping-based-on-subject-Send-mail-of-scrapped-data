@@ -1,0 +1,225 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Assignment_email_dataScraping_csv" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="706,2377" sap2010:WorkflowViewState.IdRef="Assignment_email_dataScraping_csv_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="76">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Assignment_email_dataScraping_csv" sap:VirtualizedContainerService.HintSize="554,2312" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="password" />
+      <Variable x:TypeArguments="x:String" Name="email_id" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="list_mails" />
+      <Variable x:TypeArguments="x:String" Name="csv_file_path" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_items" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetPassword sap2010:Annotation.AnnotationText="Please enter your password here" DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="512,64" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALtyRW4AkmEGVo6MmoJ6v/AAAAAACAAAAAAADZgAAwAAAABAAAACpxtDG0lv0aVCe6p/9DFqwAAAAAASAAACgAAAAEAAAAM5gleRJ7ae10oYDD6S7nxoIAAAAdihFAWCVyYMUAAAAqdkeX/e3Lr/bVrSKkKeeSMZu4Bk=" Result="[password]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetPassword>
+    <Assign sap2010:Annotation.AnnotationText="Provide your email id here" DisplayName="Assign Your Email ID" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[email_id]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[email_id]" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="512,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="True" Messages="[list_mails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="[password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512,1923" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[list_mails]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="snm:MailMessage">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1799" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="mail_Subject" />
+              <Variable x:TypeArguments="ui:Browser" Name="browser_tab" />
+              <Variable x:TypeArguments="x:String" Name="sender_mail" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[mail_Subject]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[mail.Subject]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Online Shopping Site for Fashion, Electronics, Home &amp; More | Meesho" sap:VirtualizedContainerService.HintSize="434,784" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6c41fb37-187f-4725-beae-9b90029976d7" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,568" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6c41fb37-187f-4725-beae-9b90029976d7" Text="[mail_Subject+&quot;[k(enter)]&quot;]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://meesho.com/" DesignTimeRectangle="199, 88, 400, 54" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="d2f445da-b49c-45ca-8ee7-99157b936f24" ImageBase64="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" InformativeScreenshot="cc412d896e96225e0ed6421ee5fdac00.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping Site for Fashion, Electronics, Home &amp;amp; More | Meesho' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_items]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Title'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Ratings'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="6c41fb37-187f-4725-beae-9b90029976d7" Version="V1">
+                      <uix:NExtractData.NextLink>
+                        <uix:TargetAnchorable BrowserURL="https://meesho.com/search?q=red%20tshirt%20for%20men&amp;searchType=autosuggest&amp;searchIdentifier=text_search" DesignTimeRectangle="851, 540, 47, 24" ElementType="Text" FriendlyName="'NEXT'" FullSelectorArgument="&lt;webctrl parentid='next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next' tag='SPAN' type='' aaname='NEXT' check:text='NEXT' /&gt;" Guid="926a7865-5e50-4e37-8dd4-6c1302aec843" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAYCAYAAABqWKS5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHHSURBVFhH7ZQxa8JAFID7nzo7derQKVOHgn/AP+AsOHXIFHAQBAuZBAWh4OAgHcRBcZG6SMEORbCLl1w0+Pou9xITuVhNhCDkgwfm+e7dl+Rd7uCGyeWzIpfPilw+K6Ly4w5s7g2MOliflAvBdfGfAay9oswK7JLMKUOfeVXuiPoWTLB/vRSxBrt8qHX/6yeiNIAtrY6Rx9C6wB3KEyfln+uweTmKxpzqGPDXmqyrTlBSsuuZR3vhzVRC6x+p9wOu9XOV4RnyIryncSBevgn2D6XiYBNgBVFbAzZioWt8y1NORVG27WbgoUItX2oeGo9xIyKVPOJ+tGR/rQVWld6EMY88oDDJ5LE4eKVPHeDkf8nYWFMqiRCacRHaOzhx5khiedWcXnJgrTGVHBEcXhFvX7CnvIoU8gibgaXJjVhvnXpswJkH/WQ0wFrQfwrSySOunyvgOaCnnEyeAzdwpESv8hC42ZC/i/3Y0UktH9mUIom8O+3K9f633l2CVaSe5lI5PleQR8IbYZxzYL3wv/OhcRHj57Nf9KmnenyuI4/svwfAvI1i5FXh9cGDr+ONiGscl51cGOCcGJ/L5G+MXD4rcvmsuGF5gD9aH50IuwZ+CQAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy red tshirt for men Online at best prices at Meesho' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="853, 542, 43, 20" ElementType="Button" FriendlyName="'NEXT'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' aaname='NEXT' check:text='NEXT' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAYCAYAAABqWKS5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHHSURBVFhH7ZQxa8JAFID7nzo7derQKVOHgn/AP+AsOHXIFHAQBAuZBAWh4OAgHcRBcZG6SMEORbCLl1w0+Pou9xITuVhNhCDkgwfm+e7dl+Rd7uCGyeWzIpfPilw+K6Ly4w5s7g2MOliflAvBdfGfAay9oswK7JLMKUOfeVXuiPoWTLB/vRSxBrt8qHX/6yeiNIAtrY6Rx9C6wB3KEyfln+uweTmKxpzqGPDXmqyrTlBSsuuZR3vhzVRC6x+p9wOu9XOV4RnyIryncSBevgn2D6XiYBNgBVFbAzZioWt8y1NORVG27WbgoUItX2oeGo9xIyKVPOJ+tGR/rQVWld6EMY88oDDJ5LE4eKVPHeDkf8nYWFMqiRCacRHaOzhx5khiedWcXnJgrTGVHBEcXhFvX7CnvIoU8gibgaXJjVhvnXpswJkH/WQ0wFrQfwrSySOunyvgOaCnnEyeAzdwpESv8hC42ZC/i/3Y0UktH9mUIom8O+3K9f633l2CVaSe5lI5PleQR8IbYZxzYL3wv/OhcRHj57Nf9KmnenyuI4/svwfAvI1i5FXh9cGDr+ONiGscl51cGOCcGJ/L5G+MXD4rcvmsuGF5gD9aH50IuwZ+CQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NExtractData.NextLink>
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="8, -1821, 1349, 3413" ElementType="InputBox" FriendlyName="'red tshirt'" FullSelectorArgument="&lt;webctrl tag='DIV' /&gt;" Guid="8b9dde42-5c1a-4933-a080-58d7a2af2598" InformativeScreenshot="052178f881b9d6b9cab9d90575a297ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy red tshirt for men Online at best prices at Meesho' /&gt;" SearchSteps="Selector" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="9b5347055cdbad2b8b23432455b53078.png" Selector="&lt;html app='chrome.exe' title='Online Shopping Site for Fashion, Electronics, Home &amp;amp; More | Meesho'/&gt;" Url="https://meesho.com/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[csv_file_path]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["items_files\"+mail_Subject+".csv"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_items]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[csv_file_path]" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+            <ui:ClearDataTable DataTable="[dt_items]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[sender_mail]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[system.Text.RegularExpressions.Regex.Match(mail.Sender.ToString ,"(?&lt;=&lt;).*(?=&gt;)").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Hi your requested item data is attached below" DisplayName="Send SMTP Mail Message" Email="[email_id]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[&quot;CSV file data of &quot;+mail_Subject]" To="[sender_mail]">
+              <ui:SendMail.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">[csv_file_path]</InArgument>
+                </scg:List>
+              </ui:SendMail.Files>
+            </ui:SendMail>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Mail sent to &quot;+sender_mail]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
